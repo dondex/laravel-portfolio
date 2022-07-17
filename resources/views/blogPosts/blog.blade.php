@@ -63,9 +63,9 @@
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-between">
                                     <div class="post-item">
                                         <div>
-                                            <a href="{{route('blog.show')}}"><img style="border: 1px solid #888; height: 250px; width: 400px;" class="img-fluid mt-4" src="{{asset($post->imagePath)}}" alt=""></a>
-                                            <h5 class="pt-2" style="color: #000;"><a style="text-decoration: none; color:black;" href="{{route('blog.show')}}">{{$post->title}}</a></h5>
-                                            <p class="fw-light">{{$post->created_at}}</p>
+                                            <a href="{{route('blog.show', $post)}}"><img style="border: 1px solid #333; height: 250px; width: 400px;" class="img-fluid mt-4" src="{{asset($post->imagePath)}}" alt=""></a>
+                                            <h5 class="pt-2" style="color: #000;"><a style="text-decoration: none; color:black;" href="{{route('blog.show', $post)}}">{{$post->title}}</a></h5>
+                                            <p class="fw-light p-0 m-0">{{$post->created_at->diffForHumans()}}</p>
                                             <span class="pb-5">Written By {{$post->user->name}}</span>
                                         </div>
                                     </div> 
