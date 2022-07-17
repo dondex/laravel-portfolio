@@ -57,21 +57,22 @@
         <div class="container p-0"  style="max-width: 1140px;">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                        <div class="row row-cols-2 my-5">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 d-flex justify-content-evenly">
-                                @foreach ($posts as $post)
-                                <div class="post-item">
-                                    <div>
-                                        <img style="border: 1px solid #888; height: 300px; width: 100%;" class="img-fluid" src="{{asset($post->imagePath)}}" alt="">
-                                        <h5 class="pt-2" style="color: #000;"><a style="text-decoration: none; color:black;" href="{{route('blog.show')}}">{{$post->title}}</a></h5>
-                                        <p class="fw-light">{{$post->created_at}}</p>
-                                        <span class="pb-5">Written By {{$post->user->name}}</span>
-                                    </div>
+                    
+                        <div class="row row-cols-2 my-3">
+                            @foreach ($posts as $post)
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 d-flex justify-content-between">
+                                    <div class="post-item">
+                                        <div>
+                                            <a href="{{route('blog.show')}}"><img style="border: 1px solid #888; height: 250px; width: 400px;" class="img-fluid mt-4" src="{{asset($post->imagePath)}}" alt=""></a>
+                                            <h5 class="pt-2" style="color: #000;"><a style="text-decoration: none; color:black;" href="{{route('blog.show')}}">{{$post->title}}</a></h5>
+                                            <p class="fw-light">{{$post->created_at}}</p>
+                                            <span class="pb-5">Written By {{$post->user->name}}</span>
+                                        </div>
+                                    </div> 
                                 </div>
-                                @endforeach
-                            </div>
-                            
+                            @endforeach
                         </div>
+                    
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 py-3">
                     <div class="teaser d-flex position-relative flex-column">
