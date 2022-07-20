@@ -55,6 +55,9 @@
     </section>
     <section id="home-featured">
         <div class="container p-0"  style="max-width: 1140px;">
+            @if (session('status'))
+                <p style="margin-top: 10px; color:#fff; width:100%; font-size: 18px; font-weight:600; text-align:center;background: #5cb85c;padding:17px 0;margin-bottom: 6px;">{{session('status')}}</p>
+            @endif
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                     
@@ -67,14 +70,16 @@
                                                 @if (auth()->user()->id == $post->user->id)
                                                 <div class="post-buttons d-flex justify-content-start align-items-center mt-3">
                                                     <button class="btn btn-danger"><a class="text-light" style="text-decoration: none;" href="{{route('blog.edit', $post)}}">Edit</a></button>
-                                                    <form action="" method="">
+                                                    <form action="{{route('blog.delete', $post)}}" method="post">
+                                                        @csrf
+                                                        @method('delete')
                                                         <input class="btn btn-primary mx-2" type="submit" value="Delete">
                                                     </form>
                                                 </div>
                                                 @endif
                                             @endauth
                                             <div class="card my-3">
-                                                <a href="{{route('blog.show', $post)}}"><img style="border: 1px solid #333; height: 350px; width: 100%;"  src="{{asset($post->imagePath)}}" class="card-img-top img-fluid" alt=""></a>
+                                                <a href="{{route('blog.show', $post)}}"><img style="border: 1px solid #777; height: 350px; width: 100%;"  src="{{asset($post->imagePath)}}" class="card-img-top img-fluid" alt=""></a>
                                                 <div class="card-body">
                                                   <h5  class="pt-2 card-title" style="color: #000;"><a style="text-decoration: none; color:black;" href="{{route('blog.show', $post)}}">{{$post->title}}</a></h5>
                                                   <p class="card-text">Written By {{$post->user->name}}</p>

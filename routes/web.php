@@ -30,6 +30,12 @@ Route::get('/blog/{post:slug}', [BlogController::class, 'show'])->name('blog.sho
 // To Edit Blog Post
 Route::get('/blog/{post}/edit', [BlogController::class, 'edit'])->name('blog.edit');
 
+// To Update Blog Post
+Route::put('/blog/{post}', [BlogController::class, 'update'])->name('blog.update');
+
+// To Delete Blog Post
+Route::delete('/blog/{post}', [BlogController::class, 'delete'])->name('blog.delete');
+
 
 // To store a blog post to db
 Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');

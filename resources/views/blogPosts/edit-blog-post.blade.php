@@ -15,7 +15,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <form action="{{route('blog.store')}}" method="post" enctype="multipart/form-data">
+                        <form action="{{route('blog.update', $post)}}" method="post" enctype="multipart/form-data">
+                            @method('put')
                             @csrf
                             <div class="row">
                                 <div class="form-group col-lg-12 col-md-12 col-sm-12 col-12 py-3">
