@@ -11,7 +11,7 @@ class BlogController extends Controller
 {
     public function index()
     {
-        $posts = Post::all();
+        $posts = Post::latest()->get();
         return view('blogPosts.blog', compact('posts'));
     }
 
@@ -28,7 +28,9 @@ class BlogController extends Controller
         ]);
 
         $title = $request->input('title');
-        $slug = Str::slug($title, '-');
+
+        $postId = Post::latest()->take(1)->first()->id + 1;
+        $slug = Str::slug($title, '-') . '-' . $postId;
         $user_id = Auth::user()->id;
         $body = $request->input('body');
 
@@ -47,10 +49,21 @@ class BlogController extends Controller
         return redirect()->back()->with('status', 'Post Created Successfully!');
     }
 
-
-    public function show($slug)
+    public function edit(Post $post)
     {
-        $post = Post::where('slug', $slug)->first();
+        return view('blogPosts.edit-blog-post', compact('post'));
+    }
+
+
+    // public function show($slug)
+    // {
+    //     $post = Post::where('slug', $slug)->first();
+    //     return view('blogPosts.single-blog-post', compact('post'));
+    // }
+
+    // Using Route model binding
+    public function show(Post $post)
+    {
         return view('blogPosts.single-blog-post', compact('post'));
     }
 }

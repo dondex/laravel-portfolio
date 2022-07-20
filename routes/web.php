@@ -20,11 +20,16 @@ Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
 // To Blog Page
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 
+
+// To create a blog post
+Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create')->middleware('auth');
+
 // To Single Blog Post
 Route::get('/blog/{post:slug}', [BlogController::class, 'show'])->name('blog.show');
 
-// To create a blog post
-Route::get('/blog/create', [BlogController::class, 'create'])->name('blog.create');
+// To Edit Blog Post
+Route::get('/blog/{post}/edit', [BlogController::class, 'edit'])->name('blog.edit');
+
 
 // To store a blog post to db
 Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');
