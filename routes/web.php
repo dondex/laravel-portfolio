@@ -34,7 +34,7 @@ Route::get('/blog/{post}/edit', [BlogController::class, 'edit'])->name('blog.edi
 Route::put('/blog/{post}', [BlogController::class, 'update'])->name('blog.update');
 
 // To Delete Blog Post
-Route::delete('/blog/{post}', [BlogController::class, 'delete'])->name('blog.delete');
+Route::delete('/blog/{post}', [BlogController::class, 'destroy'])->name('blog.destroy');
 
 
 // To store a blog post to db

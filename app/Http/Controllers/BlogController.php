@@ -9,9 +9,16 @@ use Illuminate\Support\Str;
 
 class BlogController extends Controller
 {
-    public function index()
+
+    public function index(Request $request)
     {
-        $posts = Post::latest()->get();
+        if ($request->search) {
+            $posts = Post::where('title', 'like', '%' . $request->search . '%')
+                ->orwhere('body', 'title', 'like', '%' . $request->search . '%')->latest()->paginate(3);
+        } else {
+            $posts = Post::latest()->paginate(3);
+        }
+
         return view('blogPosts.blog', compact('posts'));
     }
 
@@ -101,7 +108,7 @@ class BlogController extends Controller
         return view('blogPosts.single-blog-post', compact('post'));
     }
 
-    public function delete(Post $post)
+    public function destroy(Post $post)
     {
         $post->delete();
         return redirect()->back()->with('status', 'Post Delete Successfully!');

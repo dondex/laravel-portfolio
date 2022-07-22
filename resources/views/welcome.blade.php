@@ -169,7 +169,7 @@
                         <div class="bg-light py-5 px-5">
                             <div>
                                 <h4 class="fw-normal">Visit my Blog</h4>
-                                <button class="btn btn-danger"><a style="text-decoration: none; color: white;" href="{{route('blog.index')}}" target="_blank">Click Here</a></button>
+                                <button class="btn btn-danger"><a style="text-decoration: none; color: white;" href="{{route('blog.index')}}">Click Here</a></button>
                             </div>
                         </div>
                     </div>
