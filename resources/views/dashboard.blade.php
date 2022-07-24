@@ -27,11 +27,11 @@
                                 <h1 class="text-center mt-4 fw-bold">Create Post</h1>
                             </div>
                             <div class="col-4">
-                                <a href=""><img class="img-fluid" style="height: 80%; transition-timing-function: ease-in; transition: 0.5s;" src="{{asset('./image/web-design.jpg')}}" alt=""></a>
+                                <a href="{{route('categories.create')}}"><img class="img-fluid" style="height: 80%; transition-timing-function: ease-in; transition: 0.5s;" src="{{asset('./image/web-design.jpg')}}" alt=""></a>
                                 <h1 class="text-center mt-4 fw-bold">Create Category</h1>
                             </div>
                             <div class="col-4">
-                                <a href=""><img class="img-fluid" style="height: 80%; transition-timing-function: ease-in; transition: 0.5s;" src="{{asset('./image/seo.jpg')}}" alt=""></a>
+                                <a href="{{route('categories.index')}}"><img class="img-fluid" style="height: 80%; transition-timing-function: ease-in; transition: 0.5s;" src="{{asset('./image/seo.jpg')}}" alt=""></a>
                                 <h1 class="text-center mt-4 fw-bold">Categories List</h1>
                             </div>
                         </div>

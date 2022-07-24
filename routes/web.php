@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,6 +40,19 @@ Route::delete('/blog/{post}', [BlogController::class, 'destroy'])->name('blog.de
 
 // To store a blog post to db
 Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');
+
+//Category resource controller
+Route::resource('/categories', CategoryController::class);
+
+// //The resource controller above under the hood.
+// Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');
+// Route::get('/categories/create', [CategoryController::class, 'create'])->name('categories.create');
+// Route::get('/categories', [CategoryController::class, 'store'])->name('categories.store');
+// Route::get('/categories/{category}', [CategoryController::class, 'show'])->name('categories.show');
+// Route::get('/categories/{category}/edit', [CategoryController::class, 'edit'])->name('categories.edit');
+// Route::get('/categories/{category}', [CategoryController::class, 'update'])->name('categories.update');
+// Route::get('/categories/{category}', [CategoryController::class, 'destroy'])->name('categories.destroy');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

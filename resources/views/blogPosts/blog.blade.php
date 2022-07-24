@@ -65,7 +65,15 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
                         <button class="btn btn-outline-primary" type="submit">Search</button>
                     </form>
-                    
+                    <div class="row mt-4">
+                        @foreach ($categories as $category)
+                            <div class="d-flex align-items-start justify-content-start col-lg-3 col-md-3 col-sm-3 col-xs-4 col-4">
+                                <ul class="" style="list-style-type: none; padding: 0; width: 200px; height: 40px;">
+                                    <li><a class="btn btn-outline-dark" href="">{{$category->name}}</a></li>
+                                </ul>
+                            </div>
+                        @endforeach
+                    </div>
                         <div class="row row-cols-2 my-3">
                             @forelse ($posts as $post)
                                 <div class="px-5 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">

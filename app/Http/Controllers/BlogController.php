@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,7 +20,8 @@ class BlogController extends Controller
             $posts = Post::latest()->paginate(3);
         }
 
-        return view('blogPosts.blog', compact('posts'));
+        $categories = Category::all();
+        return view('blogPosts.blog', compact('posts', 'categories'));
     }
 
     public function create()
