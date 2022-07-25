@@ -59,14 +59,10 @@
         </div>
     </section>
     
-    <section id="ads-2">
-        <div class="container bg-primary" style="max-width: 1140px; height: 20vh;">
+    <section id="ads-2" style=" background-image: url('{{asset('/image/blog-image/multi1.jpg')}}'); background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
+        <div class="container" style="max-width: 1140px; height: 30vh;">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h1 class="text-center text-light my-5">
-                        Advertisement
-                    </h1>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -77,30 +73,16 @@
         </div>
         <div class="container p-0" style="max-width: 1140px;">
             <div class="row py-2">
+                @foreach ($relatedPosts as $relatedPost)
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 py-2">
                     <div class="post-item">
                         <div>
-                            <img class="img-fluid" src="{{asset('/image/responsive.jpg')}}" alt="">
-                            <h5 class="pt-2" style="color: #000;">   This country wants a four-day work week. But it's not about making workers happy </h5>
+                            <a href="{{route('blog.show', $post)}}"><img class="img-fluid" src="{{asset($relatedPost->imagePath)}}" alt=""></a>
+                            <a style="text-decoration: none;" href="{{route('blog.show', $post)}}"><h5 class="pt-2" style="color: #000;">{{$relatedPost->title}}</h5></a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 py-2">
-                    <div class="post-item">
-                        <div>
-                            <img class="img-fluid" src="{{asset('/image/responsive.jpg')}}" alt="">
-                            <h5 class="pt-2" style="color: #000;">   Here's why crypto experts are shrugging off the bitcoin crash </h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 py-2">
-                    <div class="post-item">
-                        <div>
-                            <img class="img-fluid" src="{{asset('/image/responsive.jpg')}}" alt="">
-                            <h5 class="pt-2" style="color: #000;">   John Stamos 'disappointed' In Memoriam tribute at Tonys didn't include Bob Saget </h5>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

@@ -179,59 +179,7 @@
                 </div>
             </div>
         </section>
-        <section id="contact">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h1 class="my-3" style="color: crimson;">Contact</h1>
-                        <hr style="width: 20%;" class="mb-5"/>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                        <div class="row pt-3">
-                            <div class="col-lg-1 offset-1 col-md-2 col-sm-2 col-2">
-                                <i class='bx bxs-map bx-lg' style="color: crimson;"></i>
-                            </div>
-                            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
-                                <h3>Address</h3>
-                                <p>RCD Royale Dashboards, Sabang,<br/>
-                                    Tuy, Batangas</p>
-                            </div>
-                        </div>
-                        <div class="row pt-3">
-                            <div class="col-lg-1 offset-1 col-md-2 col-sm-2 col-2">
-                                <i class='bx bxs-phone-call bx-lg' style="color: crimson;"></i>
-                            </div>
-                            <div class="col-lg-10 col-md-9 col-sm-9 col-9">
-                                <h3>Give me a ring</h3>
-                                <p>Dexter John M. Chavez<br/>
-                                    0906-940-6876</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
-                        <form action="">
-                            <div class="row">
-                                <div class="form-group col-lg-6 col-md-12 col-sm-12 col-12 py-3">
-                                    <label>First Name</label>
-                                    <input type="text" class="form-control" placeholder="First Name">
-                                </div>
-                                <div class="form-group col-lg-6 col-md-12 col-sm-12 col-12 py-3">
-                                    <label>Last Name</label>
-                                    <input type="text" class="form-control" placeholder="Last Name">
-                                </div>
-                            </div>
-                            <label for="Email">Email</label>
-                            <input type="Email" placeholder="Email" class="form-control mb-3">
-                            <label>Your Message</label>
-                            <textarea class="form-control mb-3" name="" id="" cols="10" rows="5"></textarea>
-                            <button class="btn btn-danger">Send Message</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
     </main>
 @endsection
     

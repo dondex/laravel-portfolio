@@ -44,12 +44,11 @@
                     <li class="nav-item">
                       <a class="nav-link {{Request::routeIs('login') ? 'active' : ''}}" href="{{route('login')}}">Login</a>
                     </li>
-                  @endguest
-                  @auth
                     <li class="nav-item">
                       <a class="nav-link {{Request::routeIs('register') ? 'active' : ''}}" href="{{route('register')}}">Register</a>
                     </li>
-                  @endauth
+                  @endguest
+                 
                   @auth
                     <li class="nav-item">
                       <a class="nav-link {{Request::routeIs('dashboard') ? 'active' : ''}}" href="{{route('dashboard')}}">Dashboard</a>

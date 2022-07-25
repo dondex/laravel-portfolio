@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +41,12 @@ Route::delete('/blog/{post}', [BlogController::class, 'destroy'])->name('blog.de
 
 // To store a blog post to db
 Route::post('/blog', [BlogController::class, 'store'])->name('blog.store');
+
+// To contact page
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+
+// To Send data to email.
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
 //Category resource controller
 Route::resource('/categories', CategoryController::class);

@@ -6,23 +6,23 @@
         <div class="container p-0"  style="max-width: 1140px;">
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
-                    <h1 class="fw-normal my-3">TITLE</h1>
-                    <p class="fw-light">TIME</p>
-                    <span>Written By USER</span>
+                    <h1 class="fw-normal my-3">MY BLOG ROAD TO FULL STACK DEVELOPER</h1>
+                    <p class="fw-light">Full Stack Developer All Projects</p>
+                    <span>Written By Dondex Chavez</span>
                     <div class="teaser col-lg-10 col-md-10 col-sm-10 col-xs-12 d-flex position-relative flex-column">
-                        <div class="bg-danger">
+                        <div class="bg-dark mt-3">
                             <h2 class="text-light fw-light px-5 pt-1">
                                 <strong>MY BLOG</strong>
                             </h2>
                         </div>
                         <div class="mb-3">
-                            <img class="img-fluid" src="{{asset('/image/web-design.jpg')}}" alt="covid-19">
+                            <img class="img-fluid mb-3" src="{{asset('/image/blog-image/blog-image.jpg')}}" alt="covid-19">
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 py-3">
                     <div class="teaser d-flex position-relative flex-column">
-                        <div class="bg-danger">
+                        <div class="bg-dark">
                             <h5 class="text-light fw-light px-2 py-1">
                                 <strong>Top Stories</strong>
                             </h5>
@@ -42,23 +42,16 @@
             </div>
         </div>
     </section>
-    <section id="ads-1">
-        <div class="container bg-primary" style="max-width: 1140px;">
+    <section id="ads-1" style=" background-image: url('{{asset('/image/blog-image/multi1.jpg')}}'); background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
+        <div class="container" style="max-width: 1140px; height: 40vh;">
             <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <h1 class="text-center text-light">
-                        Advertisement
-                    </h1>
-                </div>
+                
             </div>
         </div>
     </section>
     <section id="home-featured">
         <div class="container p-0"  style="max-width: 1140px;">
-            @if (session('status'))
-                <p style="margin-top: 10px; color:#fff; width:100%; font-size: 18px; font-weight:600; text-align:center;background: #5cb85c;padding:17px 0;margin-bottom: 6px;">{{session('status')}}</p>
-            @endif
-
+            @include('includes.flash-message')
             <div class="row">
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                     <form class="d-flex mt-3" role="search" action="">
@@ -67,9 +60,9 @@
                     </form>
                     <div class="row mt-4">
                         @foreach ($categories as $category)
-                            <div class="d-flex align-items-start justify-content-start col-lg-3 col-md-3 col-sm-3 col-xs-4 col-4">
-                                <ul class="" style="list-style-type: none; padding: 0; width: 200px; height: 40px;">
-                                    <li><a class="btn btn-outline-dark" href="">{{$category->name}}</a></li>
+                            <div class="d-flex align-items-start justify-content-center col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
+                                <ul class="" style="list-style-type: none; padding: 0;">
+                                    <li><a class="btn btn-outline-dark" href="{{route('blog.index', ['category' => $category->name])}}">{{$category->name}}</a></li>
                                 </ul>
                             </div>
                         @endforeach
