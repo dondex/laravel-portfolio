@@ -1,7 +1,6 @@
 <?php
 
 use App\Http\Controllers\BlogController;
-use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
@@ -48,8 +47,7 @@ Route::get('/contact', [ContactController::class, 'index'])->name('contact.index
 // To Send data to email.
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.store');
 
-//Category resource controller
-Route::resource('/categories', CategoryController::class);
+
 
 // //The resource controller above under the hood.
 // Route::get('/categories', [CategoryController::class, 'index'])->name('categories.index');

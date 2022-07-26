@@ -58,22 +58,14 @@
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
                         <button class="btn btn-outline-primary" type="submit">Search</button>
                     </form>
-                    <div class="row mt-4">
-                        @foreach ($categories as $category)
-                            <div class="d-flex align-items-start justify-content-center col-lg-4 col-md-4 col-sm-4 col-xs-4 col-4">
-                                <ul class="" style="list-style-type: none; padding: 0;">
-                                    <li><a class="btn btn-outline-dark" href="{{route('blog.index', ['category' => $category->name])}}">{{$category->name}}</a></li>
-                                </ul>
-                            </div>
-                        @endforeach
-                    </div>
+                    
                         <div class="row row-cols-2 my-3">
                             @forelse ($posts as $post)
                                 <div class="px-5 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
                                     <div class="post-item">
                                         <div>
                                             @auth
-                                                @if (auth()->user()->id == $post->user->id)
+                                                @if (auth()->user()->id === $post->user->id)
                                                 <div class="post-buttons d-flex justify-content-start align-items-center mt-3">
                                                     <button class="btn btn-danger"><a class="text-light" style="text-decoration: none;" href="{{route('blog.edit', $post)}}">Edit</a></button>
                                                     <form action="{{route('blog.destroy', $post)}}" method="post">

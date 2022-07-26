@@ -71,9 +71,8 @@
             <h2 class="fw-normal my-3">Related Blog</h2>
             <hr style="border: 3px solid #000;"/>
         </div>
-        <div class="container p-0" style="max-width: 1140px;">
+        {{-- <div class="container p-0" style="max-width: 1140px;">
             <div class="row py-2">
-                @foreach ($relatedPosts as $relatedPost)
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 py-2">
                     <div class="post-item">
                         <div>
@@ -82,9 +81,8 @@
                         </div>
                     </div>
                 </div>
-                @endforeach
             </div>
-        </div>
+        </div> --}}
     </section>
 </main>
 @endsection

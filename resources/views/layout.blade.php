@@ -38,7 +38,7 @@
                     <a class="nav-link {{Request::routeIs('blog.index') ? 'active' : ''}}" href="{{route('blog.index')}}">Blog</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Contact</a>
+                      <a class="nav-link" href="{{route('contact.index')}}">Contact</a>
                   </li>
                   @guest
                     <li class="nav-item">

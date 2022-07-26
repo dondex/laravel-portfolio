@@ -33,21 +33,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <!-- Dropdown -->
-                            <div class=" py-3 d-flex flex-column align-items-start">
-                                <label class="mb-3" for="categories"><span>Choose a category</span></label>
-                                <select class=" form-group col-lg-12 col-md-12 col-sm-12 col-12 py-2" name="category_id" id="categories">
-                                    <option selected disabled>Select option</option>
-                                    @foreach ($categories as $category)
-                                        <option value="{{$category->id}}">{{$category->name}}</option>
-                                    @endforeach
-                                </select>
-                                @error('category_id')
-                                {{-- The $attributeValue field is/must be $validationRule --}}
-                                    <p style="color: red;">{{$message}}</p>
-                                @enderror
-                            </div>
-
+                            
                             <label class="py-1" for="body">Body</label>
                             <textarea class="form-control" name="body" id="body" cols="10" rows="10">{{old('body')}}</textarea>
                             @error('body')
