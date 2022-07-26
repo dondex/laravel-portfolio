@@ -42,21 +42,24 @@
             </div>
         </div>
     </section>
-    <section id="ads-1" style=" background-image: url('{{asset('/image/blog-image/multi1.jpg')}}'); background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
+    {{-- <section id="ads-1" style=" background-image: url('{{asset('/image/blog-image/multi1.jpg')}}'); background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
         <div class="container" style="max-width: 1140px; height: 40vh;">
             <div class="row">
                 
             </div>
         </div>
-    </section>
+    </section> --}}
     <section id="home-featured">
         <div class="container p-0"  style="max-width: 1140px;">
             @include('includes.flash-message')
             <div class="row">
+                <div class="text-center my-5">
+                    <h1>My Blog Posts</h1>
+                </div>
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                     <form class="d-flex mt-3" role="search" action="">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search">
-                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                        <button class="btn btn-outline-dark" type="submit">Search</button>
                     </form>
                     
                         <div class="row row-cols-2 my-3">

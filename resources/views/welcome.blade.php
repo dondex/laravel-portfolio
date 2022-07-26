@@ -13,7 +13,7 @@
                                 A Computer Science Student at Imus Computer College (ICC) <br/>
                                 with knowledge in Frontend and Backend Web Development
                             </span>
-                            <button class="btn btn-danger my-4" style="width: 20%;">Hire Me</button>
+                            <a href="{{route('contact.index')}}"><button class="btn btn-danger my-4" style="width: 20%;">Hire Me</button></a>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-5">
@@ -52,8 +52,17 @@
                 </div>
             </div>
         </section>
+        <section id="skill-logo">
+            <div class="container-fluid" style="height: 50vh; max-width: 992px;">
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <img class="img-fluid" style="box-shadow: 5px 10px 8px #808080;" src="{{asset('./image/logo/skills.png')}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </section>
         <section id="services">
-            <div class="container">
+            <div class="container mt-5">
                 <div class="row">
                     <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                         <img class="img-fluid" style="height: 95%;" src="{{asset('./image/web-development-banner.jpg')}}" alt="">
@@ -63,11 +72,9 @@
                             <img src="{{asset('./image/web-dev.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title" style="color: crimson;">Web Development</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
-                            <div class="card-body">
-                            <a href="#" style="text-decoration: none; color: crimson;" class="card-link">Read More</a>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
@@ -75,11 +82,9 @@
                             <img src="{{asset('./image/web-design.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title" style="color: crimson;">Web Design</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
-                            <div class="card-body">
-                            <a href="#" style="text-decoration: none; color: crimson;" class="card-link">Read More</a>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
@@ -87,11 +92,9 @@
                             <img src="./image/responsive.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title" style="color: crimson;">Mobile Responsive</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
-                            <div class="card-body">
-                            <a href="#" style="text-decoration: none; color: crimson;" class="card-link">Read More</a>
-                            </div>
+                            
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
@@ -99,11 +102,9 @@
                             <img src="{{asset('./image/seo.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title" style="color: crimson;">SEO</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
-                            <div class="card-body">
-                            <a href="#" style="text-decoration: none; color: crimson;" class="card-link">Read More</a>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
