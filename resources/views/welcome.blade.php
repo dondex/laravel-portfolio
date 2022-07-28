@@ -72,7 +72,7 @@
                             <img src="{{asset('./image/web-dev.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title" style="color: crimson;">Web Development</h5>
-                            <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text pb-4">Building and maintenance of websites; it’s the work that happens behind the scenes to make a website look great, work fast and perform well with a seamless user experience.</p>
                             </div>
                             
                         </div>
@@ -82,7 +82,7 @@
                             <img src="{{asset('./image/web-design.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title" style="color: crimson;">Web Design</h5>
-                            <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text pb-4">Works on the appearance, layout, and, in some cases, content of a website. Appearance, for instance, relates to the colors, font, and images used.</p>
                             </div>
                             
                         </div>
@@ -92,7 +92,7 @@
                             <img src="./image/responsive.jpg" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title" style="color: crimson;">Mobile Responsive</h5>
-                            <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text pb-4">A website or email is displayed on a mobile device and it automatically adjusts it's sizing, layout, and proportions to display in a legible manner on the device.</p>
                             </div>
                             
                         </div>
@@ -102,7 +102,7 @@
                             <img src="{{asset('./image/seo.jpg')}}" class="card-img-top" alt="...">
                             <div class="card-body">
                             <h5 class="card-title" style="color: crimson;">SEO</h5>
-                            <p class="card-text pb-4">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p class="card-text pb-4">Process aims to increase a business's organic search results, driving organic search traffic to the site.</p>
                             </div>
                             
                         </div>
@@ -110,7 +110,7 @@
                 </div>
             </div>
         </section>
-        <section id="view-cv">
+        <section id="download-cv">
             <div class="container-fluid mt-5" style="background-image: url(./image/bg-cv.jpg); height: 40vh; background-repeat: no-repeat; background-size: cover; background-position: center; background-attachment: fixed;">
                 <div class="row">
                     <div class="col-5">
@@ -120,7 +120,7 @@
                         <div class="bg-light py-5 px-5">
                             <div>
                                 <h4 class="fw-normal">View my CV</h4>
-                                <button class="btn btn-danger">download</button>
+                                <a href="{{route('pdf.downloadPdf')}}"><button class="btn btn-danger">Download</button></a>
                             </div>
                         </div>
                     </div>

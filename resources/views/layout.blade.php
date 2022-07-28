@@ -44,10 +44,12 @@
                     <li class="nav-item">
                       <a class="nav-link {{Request::routeIs('login') ? 'active' : ''}}" href="{{route('login')}}">Login</a>
                     </li>
+                  @endguest
+                  @auth
                     <li class="nav-item">
                       <a class="nav-link {{Request::routeIs('register') ? 'active' : ''}}" href="{{route('register')}}">Register</a>
                     </li>
-                  @endguest
+                  @endauth
                  
                   @auth
                     <li class="nav-item">
@@ -67,9 +69,9 @@
           <div class="container py-5">
             <div class="row">
               <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                <h5 class="text-uppercase">Dex Portfolio</h5>
+                <h5 class="text-uppercase">My Portfolio</h5>
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore reprehenderit incidunt fuga tempore velit, maiores, nihil doloremque vero molestias dolorem totam perferendis facilis eos? Cupiditate tenetur eos, facilis veritatis consequatur vel perferendis eius? Facere quis, aut voluptates in placeat laborum.
+                  My portfolio that showcasing my skills and talent to pursue my dreams to become a Full Stack Developer. I can provide clean code and pixel perfect design. A passionate Web Developer ready to learn new technology and new things.
                 </p>
               </div>
               <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
@@ -98,21 +100,21 @@
                     <a href="#!" style="text-decoration: none;" class="text-white">Facebook</a>
                   </li>
                   <li>
-                    <a href="#!" style="text-decoration: none;" class="text-white">Instagram</a>
-                  </li>
-                  <li>
-                    <a href="#!" style="text-decoration: none;" class="text-white">Twitter</a>
-                  </li>
-                  <li>
                     <a href="#!" style="text-decoration: none;" class="text-white">Github</a>
+                  </li>
+                  <li>
+                    <a href="#!" style="text-decoration: none;" class="text-white">Linkedin</a>
+                  </li>
+                  <li>
+                    <a href="#!" style="text-decoration: none;" class="text-white">UpWork</a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
           <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-            © 2020 Copyright:
-            <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            Developed by :
+            <a style="text-decoration: none;" class="text-danger" href="https://www.facebook.com/dondex.chavez.52">Dondex Chavez</a>
           </div>
         </footer>
       </section>

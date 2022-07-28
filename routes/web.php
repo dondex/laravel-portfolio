@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PdfController;
 use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -17,6 +18,9 @@ use Illuminate\Support\Facades\Route;
 */
 // To Welcome Page
 Route::get('/', [WelcomeController::class, 'index'])->name('welcome.index');
+
+// Download PDF
+Route::get('downloadPdf', [PdfController::class, 'downloadPdf'])->name('pdf.downloadPdf');
 
 // To Blog Page
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
