@@ -28,7 +28,7 @@
                             </h5>
                         </div>
                         <div class="">
-                            <img class="img-fluid" src="{{asset('/image/web-design.jpg')}}" alt="covid-19">
+                            <img class="img-fluid" src="{{asset('/image/blog-image/top-story.jpg')}}" alt="top story">
                         </div>
                     </div>
                     <div class="">
