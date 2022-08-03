@@ -1,0 +1,14 @@
+
+
+.image-overlay:hover {
+    opacity: 1 !important;
+}
+
+.image-overlay > * {
+    transform: translateY(20px) !important;
+    transition: transform 0.25s !important;
+}
+
+.image-overlay:hover > * {
+    transform: translateY(0) !important;
+}

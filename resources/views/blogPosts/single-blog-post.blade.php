@@ -59,7 +59,7 @@
         </div>
     </section>
     
-    <section id="ads-2" style=" background-image: url('{{asset('/image/blog-image/multi1.jpg')}}'); background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
+    <section id="ads-2" style=" background-image: url('{{asset('/image/blog-image/single-img.jpg')}}'); background-position: center;background-repeat: no-repeat;background-size: cover;background-attachment: fixed;">
         <div class="container" style="max-width: 1140px; height: 30vh;">
             <div class="row">
                 

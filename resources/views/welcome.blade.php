@@ -131,7 +131,7 @@
             </div>
         </section>
         <section id="portfolio">
-            <div class="container">
+            <div class="container" style="height: 70vh;">
                 <div class="row">
                     <div class="col-12">
                         <h1 class="my-3" style="color: crimson;">Portfolio</h1>
@@ -140,23 +140,22 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <img class="img-fluid" style="height: 80%; width: 100%; box-shadow: 5px 10px 8px #808080;" src="{{asset('./image/portfolio/port1.jpg')}}" alt="">
+                        <div class="image-port" style="position: relative; width: 400px;">
+                            <img class="img-fluid image-in" style="box-shadow: 5px 10px 8px #808080; display:block; width: 100%;height: 250px;" src="{{asset('./image/portfolio/my-port.png')}}" alt="">
+                            <div class="image-overlay d-flex align-items-center justity-content-center flex-column" style="position: absolute; top: 0; left:0;width: 100%; height:100%; background: rgba(0,0,0, 0.6); opacity: 0;">
+                                <div class="image-btn my-auto">
+                                    <a href="https://github.com/dondex/laravel-portfolio" target="_blank"><button class="btn btn-light">Source Code</button></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                        <img class="img-fluid" style="height: 150%; width: 100%; box-shadow: 5px 10px 8px #808080;" src="{{asset('./image/portfolio/under_construction.jpg')}}" alt="">
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <img class="img-fluid" style="height: 80%; width: 100%; box-shadow: 5px 10px 8px #808080;" src="{{asset('./image/portfolio/port2.jpg')}}" alt="">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <img class="img-fluid" style="height: 80%; width: 100%; box-shadow: 5px 10px 8px #808080;" src="{{asset('./image/portfolio/port4.jpg')}}" alt="">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <img class="img-fluid" style="height: 80%; width: 100%; box-shadow: 5px 10px 8px #808080;" src="{{asset('/image/portfolio/port5.jpg')}}" alt="">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <img class="img-fluid" style="height: 80%; width: 100%; box-shadow: 5px 10px 8px #808080;" src="{{asset('./image/portfolio/port1.jpg')}}" alt="">
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                        <img class="img-fluid" style="height: 80%; width: 100%; box-shadow: 5px 10px 8px #808080;" src="{{asset('./image/portfolio/port2.jpg')}}" alt="">
-                    </div>
+                        <img class="img-fluid" style="height: 150%; width: 100%; box-shadow: 5px 10px 8px #808080;" src="{{asset('./image/portfolio/under_construction.jpg')}}" alt="">
+                    </div> --}}
+                    
                 </div>
             </div>
         </section>
